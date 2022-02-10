@@ -1,0 +1,21 @@
+@import url('./stylesheets/reset.css');
+@import url('./stylesheets/normalized.css');
+@import url('./stylesheets/typography.css');
+@import url('./stylesheets/utils.css');
+
+:root {
+        
+    /*
+    
+    The four basic web colors 
+        * 'danger' gives users an 'alert'
+        * 'warning' is a light warning. The user may ignore this color.
+        * 'info' is used for the purpose of providing information. It stands out.
+        *
+    */
+
+    --color_danger: rgb(244, 67, 54, 1);
+    --color_success: rgb(76, 175, 80, 1);
+    --color_warning: rgb(255, 235, 59, 1);
+    --color_info: rgb(33, 150, 243, 1);
+}
