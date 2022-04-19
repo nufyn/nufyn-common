@@ -1,0 +1,35 @@
+/* all flattening element */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: unset;
+    border: none;
+    outline: none;
+    font-size: 100%;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
+}
+
+::before,
+::after {
+    text-decoration: inherit;
+    /* 1 */
+    vertical-align: inherit;
+    /* 2 */
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}

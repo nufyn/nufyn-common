@@ -1,0 +1,52 @@
+@import url('../stylesheets/haedo_reset.css');
+@import url('../stylesheets/typography.css');
+@import url('../stylesheets/utils.css');
+
+:root {
+
+    /* 서비스 특성에 맞게 변경해서 사용*/
+    /* 
+        The point color
+        * brand(accent) color
+            * primary color : main brand color - usable 60% ~ 70%;
+            * action color : interaction element - Usually, It is complementary to the main brand color.
+        * text color
+            * text black : main text, title
+            * text body : description, paragraph, sub text
+        * background
+        * border : touchable element
+        * disbled : disabled element
+    */
+
+    --color_text_title: rgba(34, 34, 34, 1);
+    --color_text_paragraph: rgba(102, 102, 102, 0.4);
+    --color_text_placeholder: rgba(153, 153, 153, 0.2);
+    --color_text_disabled: rgba(203, 203, 203, 0.6);
+
+    /* 가급적 변경 금지 */
+    /* 
+        The achromatic color
+        * black
+        * white
+        * gray
+    */
+
+    --color_black: rgba(13, 13, 13, 1);
+    --color_white: rgba(245, 245, 245, 1);
+    --color_gray: rgba(128, 128, 128, 1);
+    --color_gray_dark: rgba(105, 105, 105, 1);
+    --color_gray_light: rgba(204, 204, 204, 1);
+    /*
+    The four basic web colors 
+        * 'danger' gives users an 'alert'
+        * 'warning' is a light warning. The user may ignore this color.
+        * 'info' is used for the purpose of providing information. It stands out.
+        * grey : 'disabled' sign color
+    */
+
+    --color_danger: rgba(244, 67, 54, 1);
+    --color_success: rgba(76, 175, 80, 1);
+    --color_warning: rgba(255, 235, 59, 1);
+    --color_info: rgba(33, 150, 243, 1);
+    --color_disabled: rgba(153, 153, 153, 1);
+}

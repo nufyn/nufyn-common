@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* 기본 폰트 사이즈 16px */
+/* 기본 관리자 폰트 사이즈 14 ~ 15px */
+/* 큰 폰트 사이즈 16 ~ 18px */
+*,
+html,
+body {
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color_black);
+}
+
+*::after {
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color_black);
+}
+
+*::before {
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color_black);
+}
+
+input[type=password] {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 폰트 사이즈 */
+
+/* 절대적인 사이즈 */
+.font-size__1 {
+    font-size: 1rem !important;
+}
+
+.font-size__2 {
+    font-size: 2rem !important;
+}
+
+.font-size__3 {
+    font-size: 3rem !important;
+}
+
+/* 상대적인 사이즈 */
+.font-size__xs {
+    font-size: 0.75em !important;
+}
+
+.font-size__sm {
+    font-size: 0.875em !important;
+}
+
+.font-size__md {
+    font-size: 1em !important;
+}
+
+.font-size__lg {
+    font-size: 1.125em !important;
+}
+
+.font-size__xl {
+    font-size: 1.25em !important;
+}
+
+/* 폰트 굵기 */
+
+.font-weight__light {
+    font-weight: lighter !important;
+}
+
+.font-weight__middle {
+    font-weight: normal !important;
+}
+
+.font-weight__bold {
+    font-weight: bolder !important;
+}
+
+/* 컬러 */
+
+.text-color__point {
+    color: var(--color_point) !important;
+}
+
+.text-color__point-sub {
+    color: var(--color_point_sub) !important;
+}
+
+.text-color__black {
+    color: var(--color_black) !important;
+}
+
+.text-color__gray {
+    color: var(--color_gray) !important;
+}
+
+.text-color__gray-light {
+    color: var(--color_gray_light) !important;
+}
+
+.text-color__grey {
+    color: var(--color_grey) !important;
+}
+
+.text-color__white {
+    color: var(--color_white) !important;
+}
+
+.text-color__danger {
+    color: var(--color_danger) !important;
+}
+
+.text-color__warning {
+    color: var(--color_warning) !important;
+}
+
+.text-color__success {
+    color: var(--color_success) !important;
+}
+
+.text-color__info {
+    color: var(--color_info) !important;
+}
+
+/* 텍스트박스 너비 */
+
+.text-box__full {
+    display: inline-block;
+    width: 100% !important;
+}
+
+.text-box__half {
+    display: inline-block;
+    width: 50% !important;
+}
+
+/* 텍스트 정렬 */
+
+.text-align__center {
+    text-align: center !important;
+}
+
+.text-align__left {
+    text-align: left !important;
+}
+
+.text-align__right {
+    text-align: right !important;
+}
+
+/* letter spacing */
+
+.text-spacing {
+    letter-spacing: normal !important;
+}
+
+/* line-height */
+
+.text-height__sm {
+    line-height: 1.15 !important;
+}
+
+.text-height__md {
+    line-height: 1.35 !important;
+}
+
+.text-height__lg {
+    line-height: 1.5 !important;
+}
+
+/* 텍스트 줄 바꿈 처리 */
+
+.word-break__keep {
+    word-break: keep-all !important;
+}
+
+.word-break__all {
+    word-break: break-all !important;
+}
+
+.text-overflow__ellipsis {
+    display: inline-block !important;
+    width: 100% !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.text-deco__underline {
+    text-decoration: underline;
+}
+
+.text-deco__linethrough {
+    text-decoration: line-through;
+}
+
+/* 
+
+커스텀 텍스트 강세
+
+*/
+
+.text-accent__storng {
+    font-size: 1.175em;
+    font-weight: bolder;
+    color: var(--color_point);
+}
+
+.text-accent__weak {
+    font-size: 0.875em;
+    font-weight: lighter;
+    opacity: 0.75;
+}
+
+/* 
+
+타이틀
+
+*/
+
+.word-title {
+    font-size: 1.125em;
+    font-weight: bolder;
+    line-height: 1.5;
+    color: var(--color_point);
+    margin-bottom: 0.25em;
+}
+
+@media all and (min-width:480px) {}
+
+@media all and (min-width:768x) {}
+
+@media all and (min-width:1024px) {
+
+    *,
+    html,
+    body {
+        font-size: 16px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--color_black);
+    }
+
+    *::after {
+        font-size: 16px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--color_black);
+    }
+
+    *::before {
+        font-size: 16px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--color_black);
+    }
+}
+
+@media all and (min-width:1280px) {}

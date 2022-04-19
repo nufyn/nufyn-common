@@ -1,0 +1,676 @@
+/* reset css 2021*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/**
+ * 紐⑤뱺 �섎━癒쇳듃�� border-box�띿꽦�� 媛�吏꾨떎. 利�, �뚮몢由щ� �ы븿�� �ъ씠利덈� 媛�吏꾨떎.
+ */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/**
+ * 1. 紐⑤뱺 釉뚮씪�곗��먯꽌 媛��곸꽑�앹옄�ㅼ쓽 �띿뒪�� �곗퐫�덉씠�섏� 怨꾩듅諛쏅뒗��. (opinionated).
+ * 2. 紐⑤뱺 釉뚮씪�곗��먯꽌 媛��곸꽑�앹옄�ㅼ쓽 vertical-align�� 怨꾩듅諛쏅뒗��. (opinionated).
+ */
+
+::before,
+::after {
+    text-decoration: inherit;
+    /* 1 */
+    vertical-align: inherit;
+    /* 2 */
+}
+
+/* 釉붾줉 �섎━癒쇳듃 */
+dd,
+dl,
+hr,
+ul,
+nav,
+menu,
+main address,
+audio,
+video,
+canvas,
+figure,
+blockquote,
+fieldset,
+figcaption,
+p,
+pre,
+form,
+noscript,
+details,
+hgroup,
+article,
+aside,
+footer,
+header,
+section,
+div {
+    display: block;
+}
+
+/* �몃씪�몃툝�� �섎━癒쇳듃 */
+abbr,
+b,
+bdo,
+br,
+code,
+cite,
+map,
+object,
+q,
+samp,
+small,
+big,
+sub,
+sup,
+strong,
+font,
+code,
+textarea,
+tt,
+select,
+label,
+input,
+a,
+button span {
+    display: inline-block;
+}
+
+/**
+ * 1. 而ㅼ꽌 理쒓린�� (opinionated).
+ * 2. 湲곕낯 line-height�� 1.5 (opinionated).
+ * 3. ��궗�댁쫰 珥덇린�� (opinionated).
+ * 4. ios�먯꽌 �섏씠�쇱씠�몃릺�� 遺�遺� ��젣 (opinionated).
+ * 5. ie �띿뒪�� �ъ씠利덈컦 諛⑺뼢�� 珥덇린��
+ * 6. 以꾨컮轅� 珥덇린�� (opinionated).
+ */
+
+html {
+    cursor: default;
+    /* 1 */
+    line-height: 1.5;
+    /* 2 */
+    -moz-tab-size: 4;
+    /* 3 */
+    tab-size: 4;
+    /* 3 */
+    -webkit-tap-highlight-color: transparent
+        /* 4 */
+    ;
+    -ms-text-size-adjust: 100%;
+    /* 5 */
+    -webkit-text-size-adjust: 100%;
+    /* 5 */
+    word-break: break-word;
+    /* 6 */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+/* 諛붾뵒�� 留덉쭊 �놁븷湲� */
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    line-height: 1.35;
+    word-break: keep-all;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+    font-size: 2em;
+    line-height: 1.65;
+}
+
+/* 由ъ뒪�몄뒪���쇰컦 由ъ뒪�� �ъ씠�ъ씠 留덉쭊 �놁븷湲� */
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* �뚯씠釉� 肄쒕옪�� �놁븷湲� */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+    display: inline-block;
+    max-width: 100%;
+    border-style: none;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    border: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+}
+
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+
+button {
+    /* 1 */
+    text-transform: none;
+    overflow: visible;
+}
+
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+button,
+a,
+input[type=checkbox],
+input[type=radio] {
+    cursor: pointer;
+}
+
+legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+
+summary {
+    display: list-item;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration-line: none;
+    text-decoration-color: inherit;
+}
+
+small {
+    font-size: 80%;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+iframe {
+    border-style: none;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+svg:not([fill]) {
+    fill: currentColor;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button {
+    overflow: visible;
+    /* 1 */
+    text-transform: none;
+    /* 2 */
+}
+
+fieldset {
+    border: 1px solid #a0a0a0;
+    /* 1 */
+    padding: 0.35em 0.75em 0.625em;
+    /* 2 */
+}
+
+input {
+    color: var(--color_black);
+    background-color: white;
+    border: var(--border_gray_light_1);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+input+label {
+    cursor: pointer;
+}
+
+input:disabled {
+    cursor: not-allowed;
+    background-color: var(--color_board);
+    color: var(--color_placeholder);
+}
+
+input:read-only {
+    cursor: default;
+    background-color: var(--color_board);
+    color: var(--color_grey);
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=tel],
+input[type=email] {
+    cursor: text;
+}
+
+progress {
+    display: inline-block;
+    /* 1 */
+    vertical-align: baseline;
+    /* 2 */
+}
+
+textarea {
+    margin: 0;
+    /* 1 */
+    overflow: auto;
+    /* 2 */
+    resize: vertical;
+    /* 3 */
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+}
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+dialog {
+    background-color: white;
+    border: solid;
+    color: black;
+    display: block;
+    height: -moz-fit-content;
+    height: -webkit-fit-content;
+    height: fit-content;
+    left: 0;
+    margin: auto;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+}
+
+dialog:not([open]) {
+    display: none;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+    font: inherit;
+    background-color: transparent;
+    -ms-touch-action: manipulation;
+    /* 1 */
+    touch-action: manipulation;
+    /* 2 */
+}
+
+select {
+    background-color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(/public/images/main/ic_select_arrow.svg);
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 0.5rem);
+    background-position-y: 50%;
+    background-size: 16px;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/* �ㅽ겕濡� */
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 100%;
+    border: none;
+    padding: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    display: none;
+    border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: var(--color_grey);
+    border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color_point);
+}
+
+[aria-busy="true"] {
+    cursor: progress;
+}
+
+[aria-controls] {
+    cursor: pointer;
+}
+
+[aria-disabled="true"],
+[disabled] {
+    cursor: not-allowed;
+}
+
+[aria-hidden="false"][hidden] {
+    display: initial;
+}
+
+[aria-hidden="false"][hidden]:not(:focus) {
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
