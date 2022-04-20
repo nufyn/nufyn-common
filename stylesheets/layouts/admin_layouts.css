@@ -1,0 +1,410 @@
+@import "./table.css";
+@import "./form.css";
+@import "./flex.css";
+
+/* 
+
+Grab the base layout
+전체 틀 잡기
+
+*/
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+body.row {
+    flex-direction: row;
+}
+
+.main-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* 이거를 살리면 컨텐츠만 스크롤걸림 */
+    /* overflow: auto; */
+}
+
+@media all and (min-width: 1024px) {
+    .main-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+.contents-main {
+    flex: 1;
+    width: 100%;
+    padding: 1.25rem;
+}
+
+@media all and (min-width: 600px) {
+    .contents-main {
+        flex: 1;
+        width: 100%;
+        /* height: 100%; */
+        padding-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.contents-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1.25rem;
+}
+
+.contents-title.lighter {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.contents-title-wrap {
+    margin-bottom: 1.25rem;
+}
+
+.contents-title-wrap .contents-title {
+    margin-bottom: 0;
+}
+
+.content-center__margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margin-align__left {
+    margin-right: auto;
+}
+
+.margin-align__right {
+    margin-left: auto;
+}
+
+/* 
+
+헤더 레이아웃 배치
+
+*/
+
+.header-wrap {
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    background-color: var(--color_primary_sub);
+}
+
+.tnb-wrap {
+    /* display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    grid-template-rows: auto;
+    height: 2.625rem; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tnb-list__left {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tnb-list__center {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tnb-list__right {
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tnb-brand-logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: auto;
+    height: 2.75rem;
+    font-size: 0;
+    clear: both;
+}
+
+@media all and (min-width: 1280px) {
+    .tnb-brand-logo {
+        justify-content: flex-start;
+    }
+}
+
+.tnb-brand-logo img {
+    width: auto;
+    height: 100%;
+}
+
+.tnb-list {}
+
+.tnb-item {}
+
+.tnb-link {}
+
+/* 
+
+브레드 크럼브 레이아웃
+
+*/
+
+.breadcrumb-wrap {
+    display: block;
+    background-color: var(--color_white);
+    border-top: var(--border_grey_1);
+    border-bottom: var(--border_grey_1);
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 18rem;
+}
+
+.breadcrumb-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    line-height: 1.5;
+}
+
+.breadcrumb-item {
+    width: auto;
+}
+
+.breadcrumb-item::before {
+    content: '/';
+    margin-left: 4px;
+}
+
+.breadcrumb-item:nth-child(1)::before {
+    content: '';
+}
+
+.breadcrumb-link {
+    display: inline-block;
+}
+
+.breadcrumb-link.active {
+    font-weight: bolder;
+    color: var(--color_primary);
+}
+
+/* 
+
+사이드 네브바
+
+*/
+
+.aside-wrap {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    max-width: 16.25rem;
+    width: 0;
+    height: 0;
+    background-color: var(--color_primary);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+@media all and (min-width: 1024px) {
+    .aside-wrap {
+        position: relative;
+        left: 0;
+        max-width: 16.25rem;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.snb-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    height: 100%;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.snb-brand-logo {
+    width: auto;
+    height: 44px;
+    font-size: 0;
+    clear: both;
+}
+
+.snb-brand-logo img {
+    width: auto;
+    height: 100%;
+}
+
+.close-button {
+    text-align: left;
+}
+
+.snb-list {}
+
+.snb-item {
+    display: block;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.snb-item.active {
+    background-color: var(--color_primary);
+    border-radius: 0.5rem;
+}
+
+.snb-link__home {
+    font-size: 1.5rem;
+    color: var(--color_white);
+    font-weight: 600;
+    height: 2.75rem;
+    line-height: 2.75rem;
+}
+
+.snb-link {
+    width: auto;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    color: var(--color_white);
+}
+
+@media all and (min-width: 1024px) {
+    .snb-link {
+        width: auto;
+        font-size: 1rem;
+        padding: 0.5rem;
+        color: var(--color_gray);
+    }
+}
+
+.snb-item.active .snb-link {
+    font-weight: 600;
+    color: white;
+}
+
+.side-navbar {}
+
+.page-tab-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 37.5rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-tab-item {
+    flex: 1;
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.page-tab-link {
+    padding: 0.5rem;
+    border-radius: 50px;
+}
+
+.page-tab-link.active {
+    background-color: var(--color_primary);
+    color: white;
+}
+
+.side-navbar .close-button {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.side-navbar-list {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-navbar-item {
+    width: 100%;
+}
+
+.side-navbar-item:nth-child(1)::before {
+    content: '';
+    display: block;
+    width: 1.375rem;
+    height: 3px;
+    background-color: var(--color_primary);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2.5rem;
+}
+
+.side-navbar-link {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.875rem;
+    color: var(--color_sub);
+    padding-top: 1.25rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 1.25rem;
+}
+
+.side-navbar-link:hover,
+.side-navbar-link.active {
+    position: relative;
+    color: white;
+    background-color: var(--color_primary);
+    padding-top: 1.25rem;
+    padding-left: 2.5rem;
+    padding-bottom: 1.25rem;
+    border-radius: 25px;
+}
+
+/* 
+
+푸터 레이아웃
+
+*/
+
+.footer-wrap {
+    background-color: var(--color_background);
+    height: 60px;
+}
