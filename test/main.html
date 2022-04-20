@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/common.css" />
+    <style>
+        .color-chip {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: inherit;
+            display: inline-block;
+            width: auto;
+            height: auto;
+            line-height: 1.35;
+            padding: 4px 18px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+    <aside id="side_nav"></aside>
+    <main>
+        <aside id="side_column"></aside>
+        <h1>사용 예</h1>
+        <hr />
+        <article>
+            <h2>컬러칩</h2>
+            <section>
+                <h3>브랜드 컬러</h3>
+                <ul class="flex-row">
+                    <li>
+                        <h4>메인 브랜드 컬러</h4>
+                        <div class="color-chip" style="background-color: var(--color_primary);"></div>
+                    </li>
+                    <li>
+                        <h4>어두운 메인 컬러</h4>
+                        <div class="color-chip" style="background-color: var(--color_primary_dark);"></div>
+                    </li>
+                    <li>
+                        <h4>밝은 메인 컬러</h4>
+                        <div class="color-chip" style="background-color: var(--color_primary_light);"></div>
+                    </li>
+                    <li>
+                        <h4>액션 컬러</h4>
+                        <div class="color-chip" style="background-color: var(--color_action);"></div>
+                        <button type="button" style="background-color: var(--color_action);">
+                            <span style="color: var(--color_black)">버튼</span>
+                        </button>
+                    </li>
+                    <li>
+                        <h1 style="color:var(--color_primary);">메인 브랜드 타이틀</h1>
+                        <div class="flex-row">
+                            <h2 style="color:var(--color_primary_dark);">메인 소제목</h2>
+                            <h2 style="color:var(--color_primary_light);">메인 소제목</h2>
+                        </div>
+                    </li>
+                </ul>
+                <h3>텍스트 컬러</h3>
+                <ul class="flex-row">
+                    <li>
+                        <h4>텍스트 블랙 - title</h4>
+                        <div class="color-chip" style="background-color: var(--color_text_title);"></div>
+                    </li>
+                    <li>
+                        <h4>텍스트 바디 - paragraph</h4>
+                        <div class="color-chip" style="background-color: var(--color_text_paragraph);"></div>
+                    </li>
+                    <li>
+                        <h4>텍스트 서브 컬러 - placeholder</h4>
+                        <div class="color-chip" style="background-color: var(--color_text_placeholder);"></div>
+                    </li>
+                    <li>
+                        <h4>텍스트 비가시 컬러 - disabled</h4>
+                        <div class="color-chip" style="background-color: var(--color_text_disabled);"></div>
+                    </li>
+                    <li>
+                        <h2 style="color:var(--color_primary);">메인 칼럼 타이틀</h2>
+                        <!-- <h3 style="color:var(--color_text_title);">텍스트 블랙 제목</h3> -->
+                        <p style="color: var(--color_text_paragraph)">Lorem ipsum dolor, sit amet consectetur
+                            adipisicing
+                            elit. Distinctio, nulla est quos
+                            aspernatur nobis qui saepe nemo. Modi, molestiae aliquid nesciunt ipsum similique earum. Aut
+                            labore facere aperiam hic? Ipsa?</p>
+                    </li>
+                </ul>
+                <h3>기타</h3>
+                <ul class="flex-row">
+                    <li>
+                        <h4>테두리 색</h4>
+                        <div class="color-chip" style="background-color: var(--color_border);"></div>
+                        <div class="color-chip"
+                            style="border: 1px solid var(--color_border); background-color: var(--color_background);">
+                        </div>
+                    </li>
+                    <li>
+                        <h4>배경색</h4>
+                        <div class="color-chip" style="background-color: var(--color_background);"></div>
+                    </li>
+                    <li>
+                        <h4>비활성화</h4>
+                        <div class="color-chip" style="background-color: var(--color_disabled);"></div>
+                        <button type="button" style="background-color: var(--color_disabled);">
+                            <span style="color: var(--color_text_disabled)">버튼</span>
+                        </button>
+                    </li>
+                </ul>
+                <h3>안내 색 - signed color</h3>
+                <ul class="flex-row">
+                    <li>
+                        <h4>강한 경고, 접근 금지, 위험, 알림, 실패, 비동의</h4>
+                        <div class="color-chip" style="background-color: var(--color_danger);"></div>
+                    </li>
+                    <li>
+                        <h4>약한 경고, 주의</h4>
+                        <div class="color-chip" style="background-color: var(--color_warning);"></div>
+                    </li>
+                    <li>
+                        <h4>안내, 정보제공, 알림</h4>
+                        <div class="color-chip" style="background-color: var(--color_info);"></div>
+                    </li>
+                    <li>
+                        <h4>성공, 접근가능, 동의</h4>
+                        <div class="color-chip" style="background-color: var(--color_success);"></div>
+                    </li>
+                    <li>
+                        <h4>비활성화</h4>
+                        <div class="color-chip" style="background-color: var(--color_grey);"></div>
+                    </li>
+                </ul>
+            </section>
+            <hr />
+            <h2>다음...</h2>
+            <section>
+                다음섹션...
+            </section>
+        </article>
+    </main>
+    <aside id=" side_bottom">
+    </aside>
+    <footer id="footer"></footer>
+</body>
+
+</html>

@@ -1,0 +1,627 @@
+/* 인풋 스타일 제거 */
+
+/* input 기본 스타일 초기화 */
+.input-design,
+.input-design[type='number']::-webkit-inner-spin-button,
+.input-design[type='number']::-webkit-outer-spin-button,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+.input-design::-ms-clear {
+    display: none;
+}
+
+.silence {
+    /* 실제 체크박스는 화면에서 숨김 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.input-wrap {
+    padding: 3px 0.5rem;
+    border: var(--border_grey_1);
+}
+
+/* 
+
+인풋 텍스트
+
+*/
+
+label+input[type=text],
+label+input[type=password],
+label+input[type=tel],
+label+input[type=email] {
+    margin-top: 0.25rem;
+}
+
+.input-text {
+    width: 100%;
+    padding: 0.75em 1.25rem;
+    border: var(--border_grey_1);
+    border-radius: 8px;
+    margin-bottom: 1.875rem;
+}
+
+.input-text.point {
+    border: var(--border_point_1);
+}
+
+/* 인풋 파일 */
+
+.file-design+label.file-box {
+    max-width: 7.5rem;
+    color: var(--color_point_dark);
+    font-size: 15px;
+    text-align: center;
+    border: var(--border_dark_1);
+    cursor: pointer;
+}
+
+.file-design+label.file-preview {
+    position: relative;
+    display: inline-block;
+    width: 9.375rem;
+    height: 9.375rem;
+    background-color: var(--color_grey);
+    cursor: pointer;
+}
+
+.file-design+label.file-preview::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.125rem;
+    height: 3.125rem;
+    background-image: url("/public/images/main/ic_add_preview.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 인풋 체크 */
+
+.check-design+label::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_unchecked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.check-design:checked+label::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_checked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.check-design+label.check-box::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_checkbox_unchecked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.check-design:checked+label.check-box::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_checkbox_checked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+/* 인풋 라디오 */
+
+.radio-design:checked+label::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_checkbox_checked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.radio-design+label::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_unchecked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.radio-design:checked+label::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_checked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+/* 커스텀 디자인 셀렉트 */
+
+/* IE 기본 스타일 제거 */
+select::-ms-expand {
+    display: none;
+    /* IE 10, 11 */
+}
+
+select {
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-image: url("/public/images/main/ic_select_arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 1.125rem;
+    background-origin: content-box;
+    background-position-x: right;
+    background-position-y: center;
+}
+
+.select-wrap__point {
+    max-width: 12rem;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: var(--border_point_1);
+}
+
+
+/* input 기본 스타일 초기화 */
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+    display: none;
+}
+
+.silence {
+    display: none;
+}
+
+/* // input type number 에서 화살표 제거
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+/* 
+
+인풋 텍스트
+
+*/
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
+input[type='number'] {
+    width: 100%;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 0.625rem;
+    text-align: left;
+}
+
+input[type='number'] {
+    padding-right: 16px;
+}
+
+.fake-input {
+    position: relative;
+    width: 100%;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 0.625rem;
+    min-height: 2.875rem;
+    text-align: left;
+    background-color: var(--color_board);
+    border: var(--border_gray_light_1);
+    color: var(--color_grey);
+    border-radius: 0.5rem;
+    cursor: not-allowed;
+}
+
+.fake-input.transparent {
+    color: var(--color_black);
+    background-color: transparent;
+    cursor: default;
+}
+
+/* 인풋 데이트 */
+
+input[type=date],
+input[type=datetime] {
+    padding: 8px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    padding: unset;
+    margin: unset;
+    outline: unset;
+    border: unset;
+}
+
+/* 인풋 파일 */
+
+/* 체크박스 라디오 디자인 */
+label.check-design,
+label.radio-design {
+    display: flex;
+    align-items: center;
+    line-height: 1px;
+    gap: 0.125rem;
+}
+
+input+label.radio-design::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_radio_unchecked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1.25rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    vertical-align: middle;
+}
+
+input:checked+label.radio-design::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_radio_checked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1.25rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    vertical-align: middle;
+}
+
+label.checkbox-design {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+input:checked+label.checkbox-design {
+    color: var(--color_point);
+    font-weight: bolder;
+}
+
+input+label.checkbox-design::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_checkbox_unchecked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    vertical-align: middle;
+}
+
+input:checked+label.checkbox-design::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("/public/images/main/ic_checkbox_checked.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    vertical-align: middle;
+}
+
+input+label.radiobox-design {
+    padding-top: 8px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 8px;
+    background-color: white;
+    color: var(--color_gray);
+    border: var(--border_grey_1);
+    line-height: 20px;
+}
+
+input:checked+label.radiobox-design {
+    background-color: var(--color_point);
+    color: white;
+    border: var(--border_point_1);
+}
+
+input+label.switch-design {
+    position: relative;
+    display: inline-block;
+    background-color: var(--color_gray);
+    width: 48px;
+    height: 24px;
+    line-height: 24px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+input+label.switch-design::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(0% + 0.25rem);
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+input:checked+label.switch-design {
+    background-color: var(--color_point_dark);
+}
+
+input:checked+label.switch-design::after {
+    left: unset;
+    right: calc(0% + 0.25rem);
+}
+
+
+
+
+/* 텍스트 아리아 커스텀 */
+
+textarea {
+    display: block;
+    width: 100%;
+}
+
+@media all and (min-width: 320px) {}
+
+@media all and (min-width: 400px) {
+    input+label.radiobox-design {
+        padding-left: 4px;
+        padding-right: 4px;
+        border: var(--border_grey_1);
+        line-height: 20px;
+    }
+}
+
+@media all and (min-width: 480px) {
+    input+label.radiobox-design {
+        padding-left: 8px;
+        padding-right: 8px;
+        border: var(--border_grey_1);
+        line-height: 20px;
+    }
+}
+
+@media all and (min-width: 576px) {}
+
+@media all and (min-width: 600px) {
+    input+label.radiobox-design {
+        padding-left: 18px;
+        padding-right: 18px;
+        border: var(--border_grey_1);
+        line-height: 24px;
+    }
+}
+
+@media all and (min-width: 640px) {}
+
+@media all and (min-width: 768px) {}
+
+@media all and (min-width: 840px) {}
+
+@media all and (min-width: 960px) {}
+
+@media all and (min-width: 992px) {}
+
+@media all and (min-width: 1024px) {}
+
+@media all and (min-width: 1100px) {}
+
+@media all and (min-width: 1140px) {}
+
+@media all and (min-width: 1200px) {}
+
+@media all and (min-width: 1280px) {}
+
+@media all and (min-width: 1368px) {}
+
+@media all and (min-width: 1440px) {}
+
+@media all and (min-width: 1560px) {}
+
+@media all and (min-width: 1600px) {}
+
+@media all and (min-width: 1920px) {}
+
+@media all and (min-width: 2560px) {}
+
+
+/* 
+
+커스텀 셀렉트 박스 만들기
+
+*/
+
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    /* width: 100%; */
+}
+
+.custom-select-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-select-trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* font-size: 20px; */
+    /* font-weight: 300; */
+    /* color: #3b3b3b; */
+    /* height: 60px; */
+    /* line-height: 60px; */
+    background: #ffffff;
+    cursor: pointer;
+    border: var(--border_grey_1);
+}
+
+.custom-select-trigger.point {
+    border: var(--border_point_1)
+}
+
+.custom-select-value {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.custom-select-value>* {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.custom-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: var(--border_grey_1);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    background: white;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.custom-select-box.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.custom-option {
+    position: relative;
+    display: block;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.custom-option:hover {
+    cursor: pointer;
+    background-color: var(--color_gray_light);
+}
+
+.custom-option {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.custom-option>* {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 20px;
+    background-image: url("/public/images/main/ic_select_arrow.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

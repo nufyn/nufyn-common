@@ -1,0 +1,135 @@
+/* 
+
+pagination.js와 함께 쓰세요.
+
+*/
+
+.pagination {
+    width: 100%;
+    /* max-width: 448px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+.pagination-list {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pagination-item {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+    margin-left: 2px;
+    margin-right: 2px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.pagination-item:hover,
+.pagination-item.active {
+    font-size: 1.25em;
+    font-weight: bolder;
+    color: var(--color_point);
+}
+
+.button-prev {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background-image: url("/public/images/main/ic_indicator_arrow.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 0.625rem;
+    transform: rotate(180deg);
+    /* 버튼은 상태에따라 노출시킴 */
+    visibility: hidden;
+}
+
+.button-next {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background-image: url("/public/images/main/ic_indicator_arrow.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 0.625rem;
+    /* 버튼은 상태에따라 노출시킴 */
+    visibility: hidden;
+}
+
+.button-prev__double {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background-image: url("/public/images/main/ic_indicator_arrow_end.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 0.625rem;
+    transform: rotate(180deg);
+    /* 버튼은 상태에따라 노출시킴 */
+    visibility: hidden;
+}
+
+.button-next__double {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background-image: url("/public/images/main/ic_indicator_arrow_end.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 0.625rem;
+    /* 버튼은 상태에따라 노출시킴 */
+    visibility: hidden;
+}
+
+.jump-page__first {
+    display: inline-block;
+    width: auto;
+    line-height: 24px;
+}
+
+.jump-page__last {
+    display: inline-block;
+    width: auto;
+    line-height: 24px;
+}
+
+@media all and (min-width:480px) {}
+
+@media all and (min-width:768x) {}
+
+@media all and (min-width:1024px) {
+    .pagination {
+        margin-top: 3rem;
+    }
+}
+
+@media all and (min-width:1280px) {}

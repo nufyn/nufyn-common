@@ -1,0 +1,237 @@
+.preview-upload-wrap {
+    position: relative;
+    max-width: 200px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: unset;
+    /* background-color: inherit; */
+    border: var(--border_point_1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.preview-upload-wrap::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('/public/images/main/ic_preview.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: unset;
+    z-index: 1;
+}
+
+.preview-upload-wrap.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+}
+
+.preview-upload-wrap.active::before {
+    display: none;
+}
+
+.preview-upload-wrap.active img {
+    display: block;
+}
+
+.preview-upload-wrap.rectangle {
+    max-width: 27.4375rem;
+    height: 100%;
+    aspect-ratio: 16/9;
+}
+
+;
+
+.drop-file.highlight {
+    border: 4px dotted var(--color_point);
+}
+
+.preview-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: auto;
+    height: 100%;
+    /* aspect-ratio: 1/1; */
+    z-index: 2;
+}
+
+/* 사진의 비율을 조정 */
+
+.preview-file-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--color_point);
+    color: var(--color_white);
+    text-align: center;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.preview-upload-wrap:hover .preview-file-name {
+    opacity: 1;
+}
+
+.preview-caption-wrap {
+    max-width: 25rem;
+    width: 100%;
+    aspect-ratio: 1/1;
+    font-size: 1rem;
+    background-color: var(--color_gray_light);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.preview-caption-title {
+    font-size: 1.25em;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: var(--color_black);
+    line-height: 2;
+}
+
+.preview-caption-guide {
+    font-size: 0.875em;
+    font-weight: lighter;
+    color: var(--color_gray);
+}
+
+.ic-preview {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.ic-preview.plus {
+    background-image: url("/public/images/main/ic_photo.svg");
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.button-preview-delete {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    z-index: 3;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+.preview-upload-wrap:hover .button-preview-delete {
+    opacity: 1;
+}
+
+.form-preview-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 0.625rem;
+}
+
+.form-preview-item,
+.form-preview-trigger {
+    max-width: calc(50%);
+    flex: calc(50% - 0.625rem);
+    width: 100%;
+    font-size: 0;
+}
+
+@media all and (min-width: 320px) {
+    .preview-upload-wrap {
+        margin-left: 0;
+    }
+}
+
+@media all and (min-width: 400px) {}
+
+@media all and (min-width: 480px) {
+    .preview-upload-wrap {
+        margin-left: 0;
+    }
+
+    .preview-upload-wrap::before {
+        width: 6rem;
+        height: 6rem;
+        line-height: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-preview-item,
+    .form-preview-trigger {
+        max-width: calc(30%);
+    }
+}
+
+@media all and (min-width: 576px) {}
+
+@media all and (min-width: 600px) {
+    .preview-upload-wrap::before {
+        width: 5rem;
+        height: 5rem;
+        line-height: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-preview-item,
+    .form-preview-trigger {
+        max-width: calc(20% - 0.5rem);
+    }
+}
+
+@media all and (min-width: 768px) {
+    .preview-upload-wrap::before {
+        width: 6rem;
+        height: 6rem;
+        line-height: 6rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media all and (min-width: 960px) {
+
+    .form-preview-item,
+    .form-preview-trigger {
+        max-width: calc(18%);
+    }
+}
+
+@media all and (min-width: 1024px) {}
+
+@media all and (min-width: 1280px) {
+
+    .form-preview-item,
+    .form-preview-trigger {
+        max-width: 200px;
+    }
+}

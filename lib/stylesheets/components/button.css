@@ -1,0 +1,407 @@
+/* 버튼 여러개가 한 세트일때 */
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.button-container .margin-top {
+    margin-top: 6.25rem;
+}
+
+.button-container.h-right {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.button-container.h-center {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.button-container.h-between {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.button-container.h-around {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.button-container.v-center {
+    flex-direction: row;
+    align-items: center;
+}
+
+.button-container.column {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.button-container button,
+.button-container a {
+    flex: 1;
+    display: inline-block;
+    max-width: 200px;
+    /* padding: 0.25rem; */
+    font-size: 1.125rem;
+    font-weight: normal;
+    text-align: center;
+    word-break: keep-all;
+    transition: all .25s ease-in-out;
+}
+
+/* 버튼 크기/비율 설정 */
+
+.button-xl {
+    padding: 12px 24px;
+}
+
+.button-lg {
+    padding: 8px 16px;
+}
+
+.button-md {
+    padding: 6px 12px;
+}
+
+.button-sm {
+    padding: 3px 16px;
+}
+
+.button-xs {
+    padding: 3px 8px;
+}
+
+/* 색 채움 버튼 */
+
+a.ground-point,
+input[type=button].ground-point,
+input[type=submit].ground-point,
+button.ground-point {
+    background-color: var(--color_point);
+    border: var(--border_point_1);
+    color: white;
+}
+
+a.ground-point:hover,
+a.ground-point.active,
+input[type=button].ground-point:hover,
+input[type=button].ground-point.active,
+input[type=submit].ground-point:hover,
+input[type=submit].ground-point.active,
+button.ground-point:hover,
+button.ground-point.active {
+    background-color: white;
+    color: var(--color_point);
+}
+
+a.ground-point__light,
+input[type=button].ground-point__light,
+input[type=submit].ground-point__light,
+button.ground-point__light {
+    background-color: var(--color_point_light);
+    border: var(--border_point_light_1);
+    color: white;
+}
+
+a.frame-point,
+input[type=button].frame-point,
+input[type=submit].frame-point,
+button.frame-point {
+    background-color: white;
+    border: var(--border_point_1);
+    color: var(--color_point);
+}
+
+a.frame-point__sub,
+input[type=button].frame-point__sub,
+input[type=submit].frame-point__sub,
+button.frame-point__sub {
+    background-color: var(--color_point_sub);
+    border: var(--border_point_1);
+    color: var(--color_point);
+}
+
+a.ground-point__light:hover,
+a.ground-point__light.active,
+a.frame-point:hover,
+a.frame-point.active,
+input[type=button].ground-point__light:hover,
+input[type=button].ground-point__light.active,
+input[type=button].frame-point:hover,
+input[type=button].frame-point.active,
+input[type=submit].ground-point__light:hover,
+input[type=submit].ground-point__light.active,
+input[type=submit].frame-point:hover,
+input[type=submit].frame-point.active,
+button.ground-point__light:hover,
+button.ground-point__light.active,
+button.frame-point:hover,
+button.frame-point.active {
+    background-color: var(--color_point);
+    border: var(--border_point_1);
+    color: white;
+}
+
+a.ground-point__dark,
+input[type=button].ground-point__dark,
+input[type=submit].ground-point__dark,
+button.ground-point__dark {
+    background-color: var(--color_point_dark);
+    border: var(--border_point_dark_1);
+    color: white;
+}
+
+a.ground-point__dark:hover,
+a.ground-point__dark.active,
+input[type=button].ground-point__dark:hover,
+input[type=button].ground-point__dark.active,
+input[type=submit].ground-point__dark:hover,
+input[type=submit].ground-point__dark.active,
+button.ground-point__dark:hover,
+button.ground-point__dark.active {
+    background-color: white;
+    color: var(--color_point_dark);
+}
+
+a.ground-gray,
+input[type=button].ground-gray,
+input[type=submit].ground-gray,
+button.ground-gray {
+    background-color: var(--color_gray);
+    border: var(--border_gray_1);
+    color: white;
+}
+
+a.ground-gray:hover,
+a.ground-gray.active,
+input[type=button].ground-gray:hover,
+input[type=button].ground-gray.active,
+input[type=submit].ground-gray:hover,
+input[type=submit].ground-gray.active,
+button.ground-gray:hover,
+button.ground-gray.active {
+    background-color: white;
+    border: var(--border_gray_1);
+    color: var(--color_gray);
+}
+
+a.ground-gray__light,
+input[type=button].ground-gray__light,
+input[type=submit].ground-gray__light,
+button.ground-gray__light {
+    background-color: var(--color_gray_light);
+    border: var(--border_gray_light_1);
+    color: white;
+}
+
+a.ground-grey,
+input[type=button].ground-grey,
+input[type=submit].ground-grey,
+button.ground-grey {
+    background-color: var(--color_grey);
+    border: var(--border_grey_1);
+    color: white;
+}
+
+a.ground-grey:hover,
+a.ground-grey.active,
+a.ground-gray__light:hover,
+a.ground-gray__light.active,
+input[type=button].ground-grey:hover,
+input[type=button].ground-grey.active,
+input[type=button].ground-gray__light:hover,
+input[type=button].ground-gray__light.active,
+input[type=submit].ground-grey:hover,
+input[type=submit].ground-grey.active,
+input[type=submit].ground-gray__light:hover,
+input[type=submit].ground-gray__light.active,
+button.ground-grey:hover,
+button.ground-grey.active,
+button.ground-gray__light:hover,
+button.ground-gray__light.active {
+    background-color: var(--color_gray);
+    color: white;
+}
+
+a.frame-gray,
+input[type=button].frame-gray,
+input[type=submit].frame-gray,
+button.frame-gray {
+    background-color: white;
+    border: var(--border_gray_1);
+    color: var(--color_gray);
+}
+
+a.frame-gray:hover,
+a.frame-gray.active,
+input[type=button].frame-gray:hover,
+input[type=button].frame-gray.active,
+input[type=submit].frame-gray:hover,
+input[type=submit].frame-gray.active,
+button.frame-gray:hover,
+button.frame-gray.active {
+    background-color: var(--color_gray);
+    border: var(--border_gray_1);
+    color: white;
+}
+
+a.frame-gray__sub,
+input[type=button].frame-gray__sub,
+input[type=submit].frame-gray__sub,
+button.frame-gray__sub {
+    background-color: var(--color_gray_light);
+    border: var(--border_gray_1);
+    color: var(--color_gray);
+}
+
+a.frame-gray__sub:hover,
+a.frame-gray__sub.active,
+input[type=button].frame-gray__sub:hover,
+input[type=button].frame-gray__sub.active,
+input[type=submit].frame-gray__sub:hover,
+input[type=submit].frame-gray__sub.active,
+button.frame-gray__sub:hover,
+button.frame-gray__sub.active {
+    background-color: var(--color_gray);
+    border: var(--border_gray_1);
+    color: white;
+}
+
+a:disabled,
+input[type=button]:disabled,
+input[type=submit]:disabled,
+button:disabled {
+    color: inherit;
+    background-color: var(--color_gray_light);
+    border: inherit;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+a:disabled:hover,
+input[type=button]:disabled:hover,
+input[type=submit]:disabled:hover,
+button:disabled:hover {
+    color: inherit;
+    background-color: var(--color_gray_light);
+    border: inherit;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media all and (min-width: 320px) {}
+
+@media all and (min-width: 400px) {}
+
+@media all and (min-width: 480px) {
+    .button-container {
+        margin-top: 0;
+    }
+}
+
+@media all and (min-width: 576px) {}
+
+@media all and (min-width: 600px) {
+    .button-xl {
+        padding: 12px 48px;
+    }
+
+    .button-lg {
+        padding: 8px 24px;
+    }
+
+    .button-md {
+        padding: 6px 16px;
+    }
+
+    .button-sm {
+        padding: 3px 16px;
+    }
+
+    .button-xs {
+        padding: 3px 8px;
+    }
+}
+
+@media all and (min-width: 640px) {}
+
+@media all and (min-width: 768px) {}
+
+@media all and (min-width: 840px) {}
+
+@media all and (min-width: 960px) {}
+
+@media all and (min-width: 992px) {}
+
+@media all and (min-width: 1024px) {
+    .button-xl {
+        padding: 12px 48px;
+    }
+
+    .button-lg {
+        padding: 8px 24px;
+    }
+
+    .button-md {
+        padding: 6px 16px;
+    }
+
+    .button-sm {
+        padding: 3px 16px;
+    }
+
+    .button-xs {
+        padding: 3px 8px;
+    }
+}
+
+@media all and (min-width: 1100px) {}
+
+@media all and (min-width: 1140px) {}
+
+@media all and (min-width: 1200px) {}
+
+@media all and (min-width: 1280px) {}
+
+@media all and (min-width: 1368px) {
+    .button-xl {
+        padding: 12px 48px;
+    }
+
+    .button-lg {
+        padding: 8px 24px;
+    }
+
+    .button-md {
+        padding: 6px 16px;
+    }
+
+    .button-sm {
+        padding: 3px 16px;
+    }
+
+    .button-xs {
+        padding: 3px 8px;
+    }
+}
+
+@media all and (min-width: 1440px) {}
+
+@media all and (min-width: 1560px) {}
+
+@media all and (min-width: 1600px) {}
+
+@media all and (min-width: 1920px) {}
+
+@media all and (min-width: 2560px) {}
