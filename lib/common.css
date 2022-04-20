@@ -52,25 +52,22 @@
     --color_disabled: rgba(153, 153, 153, 1);
 }
 
-/*
-    1. Use a more-intuitive box-sizing model.
-        - 박스 모델의 기준을 테두리 안쪽을 기준으로 한다. - padding과 margin, border가 사이즈로 책정됨.
-*/
-
+/* all flattening element */
 *,
-*::before,
-*::after {
+*::after,
+*::before {
     box-sizing: border-box;
-}
-
-/* flattening */
-
-* {
     margin: 0;
     padding: unset;
     border: none;
     outline: none;
+    font-size: 100%;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
     vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
 }
 
 /*
