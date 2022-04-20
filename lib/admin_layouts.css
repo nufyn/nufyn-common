@@ -1,6 +1,6 @@
-@import "./table.css";
-@import "./form.css";
-@import "./flex.css";
+@import "./stylesheets/layouts/table.css";
+@import "./stylesheets/layouts/form.css";
+@import "./stylesheets/layouts/flex.css";
 
 /* 
 
