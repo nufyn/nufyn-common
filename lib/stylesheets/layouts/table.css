@@ -267,8 +267,8 @@
 
     .haedo-table tbody tr td {
         text-align: center;
-        padding-top: 1.25rem;
-        padding-bottom: 1.25rem;
+        /* padding-top: 1.25rem;
+        padding-bottom: 1.25rem; */
     }
 
     .table-image {
