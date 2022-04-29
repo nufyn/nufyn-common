@@ -68,10 +68,10 @@
 .haedo-table thead tr th,
 .haedo-table tbody tr td {
     flex: 1;
-    padding-top: 1.25rem;
+    padding-top: 0.625rem;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: 0.625rem;
     text-align: center;
     vertical-align: middle;
     word-break: keep-all;
