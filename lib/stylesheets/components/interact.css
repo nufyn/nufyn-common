@@ -62,7 +62,7 @@ label+input[type=email] {
 
 .file-design+label.file-box {
     max-width: 7.5rem;
-    color: var(--color_point_dark);
+    color: var(--color_primary_dark);
     font-size: 15px;
     text-align: center;
     border: var(--border_dark_1);
@@ -350,7 +350,7 @@ label.checkbox-design {
 }
 
 input:checked+label.checkbox-design {
-    color: var(--color_point);
+    color: var(--color_primary);
     font-weight: bolder;
 }
 
@@ -394,7 +394,7 @@ input+label.radiobox-design {
 }
 
 input:checked+label.radiobox-design {
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
     color: white;
     border: var(--border_point_1);
 }
@@ -426,7 +426,7 @@ input+label.switch-design::after {
 }
 
 input:checked+label.switch-design {
-    background-color: var(--color_point_dark);
+    background-color: var(--color_primary_dark);
 }
 
 input:checked+label.switch-design::after {

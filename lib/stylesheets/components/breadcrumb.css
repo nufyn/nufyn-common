@@ -35,5 +35,5 @@
 
 .breadcrumb-link.active {
     font-weight: bolder;
-    color: var(--color_point);
+    color: var(--color_primary);
 }

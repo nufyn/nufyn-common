@@ -49,7 +49,7 @@
 .haedo-table thead tr {
     display: flex;
     flex-direction: row;
-    background-color: var(--color_point_sub);
+    background-color: var(--color_primary_sub);
     border-bottom: var(--border_point_light_1);
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;

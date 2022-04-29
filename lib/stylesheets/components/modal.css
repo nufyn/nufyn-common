@@ -86,7 +86,7 @@
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    /* background-color: var(--color_point_light); */
+    /* background-color: var(--color_primary_light); */
     border-bottom: var(--border_gray_1);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -125,7 +125,7 @@
 .dialog-title {
     font-size: 15px;
     font-weight: 600;
-    color: var(--color_point);
+    color: var(--color_primary);
 }
 
 .dialog-title.gray {
@@ -159,7 +159,7 @@
 }
 
 .modal-button.ground-point {
-    background-color: var(--color_point_light);
+    background-color: var(--color_primary_light);
 }
 
 .modal-button.ground-gray {
@@ -168,7 +168,7 @@
 
 
 .modal-button.ground-point:hover {
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
     color: white;
 }
 
@@ -231,7 +231,7 @@
     .dialog-title {
         font-size: 1rem;
         font-weight: 600;
-        color: var(--color_point);
+        color: var(--color_primary);
     }
 
     .dialog-title.gray {
@@ -449,7 +449,7 @@
 
 input[type=radio]:checked+.form-radio-box {
     border: var(--border_point_1);
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
     color: white;
     line-height: 20px;
 }

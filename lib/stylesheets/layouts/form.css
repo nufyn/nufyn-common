@@ -23,7 +23,7 @@
 .form-separator {
     width: 100%;
     height: 1px;
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
 }
 
 .form-section-title-wrap {
@@ -39,7 +39,7 @@
     display: block;
     font-size: 1.25rem;
     font-weight: bolder;
-    color: var(--color_point);
+    color: var(--color_primary);
 }
 
 /* 폼 네임(label)과 입력창(input)을 묶은 item을 세로로 정렬한 항목들 리스트 */
@@ -170,8 +170,8 @@
     text-align: center;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
-    background-color: var(--color_point_sub);
-    color: var(--color_point);
+    background-color: var(--color_primary_sub);
+    color: var(--color_primary);
     border: var(--border_point_1);
     border-radius: 0.5rem;
 }
@@ -186,7 +186,7 @@
 }
 
 .form-label.point {
-    color: var(--color_point);
+    color: var(--color_primary);
     font-weight: bolder;
 }
 
@@ -251,7 +251,7 @@
     font-weight: bolder;
     padding: 0.625rem;
     background-color: white;
-    color: var(--color_point_light);
+    color: var(--color_primary_light);
     border: var(--border_point_light_1);
     border-radius: 0.5rem;
 }
@@ -262,7 +262,7 @@
     width: 120px;
     padding: 0.625rem;
     background-color: white;
-    color: var(--color_point_light);
+    color: var(--color_primary_light);
     border: var(--border_point_light_1);
     border-radius: 0.5rem;
 }

@@ -88,7 +88,7 @@ a.ground-point,
 input[type=button].ground-point,
 input[type=submit].ground-point,
 button.ground-point {
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
     border: var(--border_point_1);
     color: white;
 }
@@ -102,14 +102,14 @@ input[type=submit].ground-point.active,
 button.ground-point:hover,
 button.ground-point.active {
     background-color: white;
-    color: var(--color_point);
+    color: var(--color_primary);
 }
 
 a.ground-point__light,
 input[type=button].ground-point__light,
 input[type=submit].ground-point__light,
 button.ground-point__light {
-    background-color: var(--color_point_light);
+    background-color: var(--color_primary_light);
     border: var(--border_point_light_1);
     color: white;
 }
@@ -120,16 +120,16 @@ input[type=submit].frame-point,
 button.frame-point {
     background-color: white;
     border: var(--border_point_1);
-    color: var(--color_point);
+    color: var(--color_primary);
 }
 
 a.frame-point__sub,
 input[type=button].frame-point__sub,
 input[type=submit].frame-point__sub,
 button.frame-point__sub {
-    background-color: var(--color_point_sub);
+    background-color: var(--color_primary_sub);
     border: var(--border_point_1);
-    color: var(--color_point);
+    color: var(--color_primary);
 }
 
 a.ground-point__light:hover,
@@ -148,7 +148,7 @@ button.ground-point__light:hover,
 button.ground-point__light.active,
 button.frame-point:hover,
 button.frame-point.active {
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
     border: var(--border_point_1);
     color: white;
 }
@@ -157,7 +157,7 @@ a.ground-point__dark,
 input[type=button].ground-point__dark,
 input[type=submit].ground-point__dark,
 button.ground-point__dark {
-    background-color: var(--color_point_dark);
+    background-color: var(--color_primary_dark);
     border: var(--border_point_dark_1);
     color: white;
 }
@@ -171,7 +171,7 @@ input[type=submit].ground-point__dark.active,
 button.ground-point__dark:hover,
 button.ground-point__dark.active {
     background-color: white;
-    color: var(--color_point_dark);
+    color: var(--color_primary_dark);
 }
 
 a.ground-gray,

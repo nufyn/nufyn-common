@@ -8,7 +8,7 @@
     min-height: 3rem;
     border-radius: 8px;
     background-color: white;
-    color: var(--color_point);
+    color: var(--color_primary);
     box-shadow: var(--shadow);
     margin-bottom: 2rem;
 }
@@ -30,7 +30,7 @@
     width: 100%;
     min-height: 3rem;
     border-radius: 8px;
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
     color: white;
     box-shadow: var(--shadow);
 }
@@ -45,15 +45,15 @@
 }
 
 .card-head.point {
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
 }
 
 .card-head.point-sub {
-    background-color: var(--color_point_sub);
+    background-color: var(--color_primary_sub);
 }
 
 .card-head.point-light {
-    background-color: var(--color_point_light);
+    background-color: var(--color_primary_light);
 }
 
 /*  카드의 제목(핵심용어)을 씀 카드헤더를 대신하여 사용할 수도 있지만 카드 바디안에서 핵심요소를 만들때에도 씀 */
@@ -61,7 +61,7 @@
     font-size: 1.375em;
     font-weight: bolder;
     line-height: 1.5;
-    color: var(--color_point);
+    color: var(--color_primary);
 }
 
 .card-head.point .card-title,

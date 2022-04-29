@@ -45,7 +45,7 @@ pagination.js와 함께 쓰세요.
 .pagination-item.active {
     font-size: 1.25em;
     font-weight: bolder;
-    color: var(--color_point);
+    color: var(--color_primary);
 }
 
 .button-prev {

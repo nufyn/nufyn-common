@@ -54,7 +54,7 @@
 ;
 
 .drop-file.highlight {
-    border: 4px dotted var(--color_point);
+    border: 4px dotted var(--color_primary);
 }
 
 .preview-image {
@@ -80,7 +80,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 0.5rem;
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
     color: var(--color_white);
     text-align: center;
     border-bottom-left-radius: 0.5rem;

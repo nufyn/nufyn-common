@@ -434,7 +434,7 @@ ex)
     top: 50%;
     right: 5vw;
     transform: translateY(-50%);
-    color: var(--color_point);
+    color: var(--color_primary);
     display: flex;
     align-items: center;
     background-image: url(/public/images/main/ic_Induce_scroll.svg);

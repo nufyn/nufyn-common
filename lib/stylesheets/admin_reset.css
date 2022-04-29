@@ -650,7 +650,7 @@ q:after {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color_point);
+    background-color: var(--color_primary);
 }
 
 [aria-busy="true"] {
